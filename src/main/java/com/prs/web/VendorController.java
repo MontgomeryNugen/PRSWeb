@@ -46,7 +46,7 @@ public class VendorController {
 	@PostMapping("/Remove")
 	public @ResponseBody String removeUser(@RequestBody Vendor vendor) {
 		vendorRepository.delete(vendor);
-		return "user deleted";
+		return "vendor deleted";
 	}
 
 }
