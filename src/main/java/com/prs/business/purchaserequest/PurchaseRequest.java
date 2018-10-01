@@ -22,6 +22,10 @@ public class PurchaseRequest {
 	private double total;
 	private LocalDateTime submittedDate;
 
+	public PurchaseRequest() {
+		super();
+	}
+
 	public PurchaseRequest(int id, int userID, String description, String justification, LocalDate dateNeeded,
 			String deliveryMode, String status, double total, LocalDateTime submittedDate) {
 		super();
