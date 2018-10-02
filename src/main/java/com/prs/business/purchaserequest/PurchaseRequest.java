@@ -7,13 +7,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import com.prs.business.user.User;
 
 @Entity
 public class PurchaseRequest {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private int userID;
+	@ManyToOne
+	@JoinColumn(name = "userID")
+	private User user;
 	private String description;
 	private String justification;
 	private LocalDate dateNeeded;
@@ -26,11 +32,11 @@ public class PurchaseRequest {
 		super();
 	}
 
-	public PurchaseRequest(int id, int userID, String description, String justification, LocalDate dateNeeded,
+	public PurchaseRequest(int id, User user, String description, String justification, LocalDate dateNeeded,
 			String deliveryMode, String status, double total, LocalDateTime submittedDate) {
 		super();
 		this.id = id;
-		this.userID = userID;
+		this.user = user;
 		this.description = description;
 		this.justification = justification;
 		this.dateNeeded = dateNeeded;
@@ -48,12 +54,12 @@ public class PurchaseRequest {
 		this.id = id;
 	}
 
-	public int getUserID() {
-		return userID;
+	public User getUser() {
+		return user;
 	}
 
-	public void setUserID(int userID) {
-		this.userID = userID;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public String getDescription() {
@@ -114,7 +120,7 @@ public class PurchaseRequest {
 
 	@Override
 	public String toString() {
-		return "PurchaseRequest [id=" + id + ", userID=" + userID + ", description=" + description + ", justification="
+		return "PurchaseRequest [id=" + id + ", user=" + user + ", description=" + description + ", justification="
 				+ justification + ", dateNeeded=" + dateNeeded + ", deliveryMode=" + deliveryMode + ", status=" + status
 				+ ", total=" + total + ", submittedDate=" + submittedDate + "]";
 	}

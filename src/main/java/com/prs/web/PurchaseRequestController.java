@@ -22,7 +22,7 @@ public class PurchaseRequestController {
 	private PurchaseRequestRepository purchaseRequestRepository;
 
 	@GetMapping("/List")
-	public @ResponseBody Iterable<PurchaseRequest> getAllProducts() {
+	public @ResponseBody Iterable<PurchaseRequest> getAllPurchaseRequests() {
 		Iterable<PurchaseRequest> PurchaseRequests = purchaseRequestRepository.findAll();
 		return PurchaseRequests;
 	}
