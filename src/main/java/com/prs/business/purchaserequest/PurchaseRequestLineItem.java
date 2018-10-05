@@ -1,11 +1,18 @@
 package com.prs.business.purchaserequest;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import com.prs.business.product.Product;
 
+@Entity
 public class PurchaseRequestLineItem {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	private int ID;
 	@ManyToOne
@@ -15,7 +22,7 @@ public class PurchaseRequestLineItem {
 	@JoinColumn(name = "productID")
 	private Product product;
 	private int quantity;
-	
+
 	public PurchaseRequestLineItem() {
 		super();
 	}
@@ -62,8 +69,8 @@ public class PurchaseRequestLineItem {
 
 	@Override
 	public String toString() {
-		return "PurchaseRequestLineItem [ID=" + ID + ", purchaseRequest=" + purchaseRequest + ", product="
-				+ product + ", quantity=" + quantity + "]";
+		return "PurchaseRequestLineItem [ID=" + ID + ", purchaseRequest=" + purchaseRequest + ", product=" + product
+				+ ", quantity=" + quantity + "]";
 	}
 
 }

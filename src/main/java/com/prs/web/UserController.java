@@ -32,6 +32,11 @@ public class UserController {
 		Optional<User> user = userRepository.findById(id);
 		return user;
 	}
+	
+//	@PostMapping("/Login")
+//	public @ResponseBody User addUser(@RequestBody User user) {
+//		return userRepository.save(user);
+//	}
 
 	@PostMapping("/Add")
 	public @ResponseBody User addUser(@RequestBody User user) {
