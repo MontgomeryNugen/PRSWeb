@@ -22,6 +22,8 @@ public class Product {
 	private double price;
 	private String unit;
 	private String photoPath;
+	
+	//test comment
 
 	public Product() {
 		super();
