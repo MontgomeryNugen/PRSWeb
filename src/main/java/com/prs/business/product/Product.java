@@ -23,7 +23,7 @@ public class Product {
 	private String unit;
 	private String photoPath;
 	
-	//test comment
+	//test comment test test test
 
 	public Product() {
 		super();
