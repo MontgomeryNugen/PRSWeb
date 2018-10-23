@@ -19,7 +19,7 @@ public class Vendor {
 	private String phoneNumber;
 	private String email;
 	private boolean isPreApproved;
-	
+
 	public Vendor() {
 		super();
 	}
@@ -28,6 +28,20 @@ public class Vendor {
 			String phoneNumber, String email, boolean isPreApproved) {
 		super();
 		this.id = id;
+		this.code = code;
+		this.name = name;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+		this.isPreApproved = isPreApproved;
+	}
+
+	public Vendor(String code, String name, String address, String city, String state, String zip, String phoneNumber,
+			String email, boolean isPreApproved) {
+		super();
 		this.code = code;
 		this.name = name;
 		this.address = address;

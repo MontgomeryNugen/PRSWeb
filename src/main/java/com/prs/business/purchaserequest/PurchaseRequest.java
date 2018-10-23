@@ -46,6 +46,19 @@ public class PurchaseRequest {
 		this.submittedDate = submittedDate;
 	}
 
+	public PurchaseRequest(User user, String description, String justification, LocalDate dateNeeded,
+			String deliveryMode, String status, double total, LocalDateTime submittedDate) {
+		super();
+		this.user = user;
+		this.description = description;
+		this.justification = justification;
+		this.dateNeeded = dateNeeded;
+		this.deliveryMode = deliveryMode;
+		this.status = status;
+		this.total = total;
+		this.submittedDate = submittedDate;
+	}
+
 	public int getId() {
 		return id;
 	}
