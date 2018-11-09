@@ -5,6 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,7 @@ import com.prs.business.purchaserequest.PurchaseRequest;
 import com.prs.business.purchaserequest.PurchaseRequestRepository;
 import com.prs.util.JsonResponse;
 
+@CrossOrigin
 @Controller
 @RequestMapping("/PurchaseRequests")
 public class PurchaseRequestController {
